@@ -7,21 +7,37 @@
 */
 
 //1 aggancio gli elementi
+const containerElement = document.getElementById("container");
+const btnElement = document.getElementById("btn")
 
 
+//2 quando clicco il pulsante parte tutto
+
+btnElement.addEventListener("click", function () {
+
+    let result = `<div class="row row-cols-3 row-cols-md-7 gap-3 justify-content-center">`
+
+    // ciclo che stampa i numeri
+    for (var i = 1; i <= 100; i++) {
 
 
-//2 ciclo che stampa i numeri
+        if (i % (5 * 3) === 0) {
+            result += `<div class="col fizzbuzz">${"FizzBuzz"}</div>`;
 
-for (var i = 1; i <= 100; i++) {
-    if (i % 15 === 0) {
-        console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            result += `<div class="col fizz" >${"Fizz"}</div>`;
 
-    } else if (i % 3 === 0) {
-        console.log("Fizz");
+        } else if (i % 5 === 0) {
+            result += `<div class="col buzz">${"Buzz"}</div>`;
 
-    } else if (i % 5 === 0) {
-        console.log("Buzz");
+        } else
+            result += `<div class="col number">${i}</div>`;
+    }
 
-    } else console.log(i);
-}
+    result += "</div>"
+
+    containerElement.innerHTML = result;
+
+
+})
+

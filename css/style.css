@@ -3,7 +3,23 @@
 }
 
 .col {
-    border: 2px dashed red;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
+    font-size: 30px;
+}
+
+.col.fizzbuzz {
+    background-color: rgb(240, 70, 111);
+}
+
+.col.fizz {
+    background-color: rgb(12, 214, 161);
+}
+
+.col.buzz {
+    background-color: rgb(255, 209, 102);
+}
+
+.col.number {
+    background-color: rgb(19, 137, 178);
 }
