@@ -1,0 +1,9 @@
+.bigger {
+    font-size: 70px;
+}
+
+.col {
+    border: 2px dashed red;
+    height: 100px;
+    width: 100px;
+}
